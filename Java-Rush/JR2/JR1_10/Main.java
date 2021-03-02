@@ -10,7 +10,6 @@ public class Main {
         Cat1 cat4 = new Cat1();
         Cat1 cat5 = new Cat1();
         Cat1 cat6 = new Cat1();   //нет методов и переменных в этом классе
-
         Cat1 cat7 = new Cat1();
         Cat1 cat8 = new Cat1();
         Cat1 cat9;

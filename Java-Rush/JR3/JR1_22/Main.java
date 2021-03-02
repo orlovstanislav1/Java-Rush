@@ -9,8 +9,8 @@ public class Main {
         System.out.println(getMetreFromCentimetre(243));
     }
 
-    public static int getMetreFromCentimetre(int centimetre) {
-        int getMetreFromCentimetre = centimetre / 100;
+    public static double getMetreFromCentimetre(double centimetre) {
+        double getMetreFromCentimetre = centimetre / 100;
         return getMetreFromCentimetre;
     }
 }
