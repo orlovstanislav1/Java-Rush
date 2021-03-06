@@ -6,8 +6,8 @@ package JR4.JR1_30;
 public class Main {
     public static void main(String[] args) {
         int i, j;
-        for (i = 0; i < 10; i++) { // в высоту
-            for (j = 0; j <= i; j++) { // в ширину
+        for (i = 0; i < 10; i++) { // в ширину (контролирует количество строк)
+            for (j = 0; j <= i; j++) { // в высоту (контролирует количество восьмерок)
                 System.out.print(8);
             }
             System.out.println();
