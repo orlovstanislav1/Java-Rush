@@ -1,16 +1,30 @@
 package JR5.JR1_3;
 
 /*
-Учет котов
+Геттеры и сеттеры для класса Dog
 */
 
 public class Cat {
-    private static int catsCount = 0;
+    private String name;
+    private int age;
 
-    public static void addNewcat() {
-        catsCount++;
+    public static void main(String[] args) {
+
     }
 
-    public void main(String[] args) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String newName) {
+        name = newName; // this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int newAge) {
+        age = newAge; // this.age = age;
     }
 }
