@@ -29,10 +29,10 @@ public class Rectangle {
         this.top = top;
         this.left = left;
         this.width = width;
-        this.height = height;
+        this.height = 1;
     }
 
-    public void initialize(Rectangle rectangle) { //Rectangle это потомок класса Object.
+    public void initialize(Rectangle rectangle) { //Rectangle это потомок класса Object. //создаем копию другого прямоугольника
         this.top = rectangle.top;
         this.left = rectangle.left;
         this.width = rectangle.width;
