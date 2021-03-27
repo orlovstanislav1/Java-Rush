@@ -1,18 +1,17 @@
 package JR5.JR1_31;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /*
-Риуем линии
+Задача по алгоритмам Ӏ Java Syntax: 5 уровень, 12 лекция
  */
 public class Main {
     public static void main(String[] args) {
-        int i, j;
-        for (i = 0; i < 9; i++) { // в ширину
-            System.out.print(8);
-        }
-        for (j = 0; j <= 10; j++) { // в высоту
-            System.out.println(8);
-        }
-        System.out.println();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int maximun = ;
+
+        System.out.println(maximun);
     }
 }
 
