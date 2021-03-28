@@ -6,7 +6,16 @@ package JR6.JR1_4;
 
 public class Solution {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        for (int i = 0; i < 50000; i++) {  // напишите тут ваш код
+
+            Cat cat = new Cat();
+            cat = null;//вот здесь первый объект становится доступен сборщику мусора
+        }
+        for (int i = 0; i < 50000; i++) {
+
+            Dog dog = new Dog();
+            dog = null;//вот здесь первый объект становится доступен сборщику мусора
+        }
     }
 }
 
