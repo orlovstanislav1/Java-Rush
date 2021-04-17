@@ -1,7 +1,7 @@
 package JR6.JR1_16;
 
 /*
-Друзей не купишь
+Минимальное число статиков
 */
 
 public class Solution {
