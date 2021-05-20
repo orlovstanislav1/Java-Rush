@@ -31,8 +31,7 @@ public class Solution {
             array2[i] = Integer.parseInt(reader.readLine());
         }
 
-
-        System.arraycopy(array1, 10, array3, 10, 10);
+        System.arraycopy(array1, 10, array3, 0, 10);
         for (int i = 0; i < 10; i++) {
             array3[i] = Integer.parseInt(reader.readLine());
         }
