@@ -1,31 +1,49 @@
 package JR7.JR1_6;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
 /*
-Чётные и нечётные циферки
+Один большой массив и два маленьких
+
+создали массив на 20 чисел,
+программа считывает числа для массива
+создали 2 массива на 10 чисел каждый,
+скопировать большой массив в два маленьких - 2 по 10
+вывести второй маленький массив на экран, каждое значение с новой строки
 */
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Solution {
-    public static int even; // кол-во четных чисел
-    public static int odd; //кол-во нечетных чисел
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int[] array1 = new int[20];
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        int x = Integer.parseInt(buffer.readLine()); // х это число вводимое с клавиатуры
-
-        while (x > 0) { // пока х>0 выполняется следующее:
-            if (x % 2 == 0) // если х делится на 2 без остатка, то
-            {
-                even++; //кол-во четных чисел увеличивается на один
-            } else odd++; // иначе на один увел. кол-во нечетных чисел
-            x = x / 10; // число х делится на 10 для того, чтобы определить четность числа на порядок выше.....
-            // А на 10 делим, что бы после каждой итерации количество разрядов уменьшалось и так до тех пор, пока не
-            // дойдете до 0 (условие выхода из цикла)
-
+        for (int i = 0; i < array1.length; i++) {
+            array1[i] = Integer.parseInt(reader.readLine());
         }
-        System.out.println("Even: " + even + " Odd: " + odd);
+        System.out.println("Массив источник = " + Arrays.toString(array1));
+        int[] array2 = new int[10];
+        int[] array3 = new int[10];
+
+        System.arraycopy(array1, 0, array2, 0, 10);
+        for (int i = 0; i < 10; i++) {
+            array2[i] = Integer.parseInt(reader.readLine());
+        }
+
+
+        System.arraycopy(array1, 10, array3, 10, 10);
+        for (int i = 0; i < 10; i++) {
+            array3[i] = Integer.parseInt(reader.readLine());
+        }
     }
 }
+ /*
+        Первым параметром является массив-источник.
+Вторым параметром является позиция начала нового массива.
+Третий параметр — массив-назначения.
+Четвертый параметр является начальным положением целевого массива.
+Последний параметр это количество элементов, которые будут скопированы. Вот код,
+чтобы скопировать последние пять элементов исходного массива в конечный массив
+(массив-назначения):
+         */
