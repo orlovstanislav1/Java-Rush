@@ -14,7 +14,7 @@ import java.util.Arrays;
 вывести второй маленький массив на экран, каждое значение с новой строки
 */
 
-public class Solution {
+public class Solution1 {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array1 = new int[20];
@@ -26,13 +26,23 @@ public class Solution {
         int[] array2 = new int[10];
         int[] array3 = new int[10];
 
+        System.arraycopy(array1, 0, array2, 0, 10);
         for (int i = 0; i < 10; i++) {
-            array2[i] = array1[i];
-            array3[i] = array1[i + 10];
+            array2[i] = Integer.parseInt(reader.readLine());
         }
 
+        System.arraycopy(array1, 10, array3, 0, 10);
         for (int i = 0; i < 10; i++) {
-            System.out.println(array2[i]);
+            array3[i] = Integer.parseInt(reader.readLine());
         }
     }
 }
+ /*
+        Первым параметром является массив-источник.
+Вторым параметром является позиция начала нового массива.
+Третий параметр — массив-назначения.
+Четвертый параметр является начальным положением целевого массива.
+Последний параметр это количество элементов, которые будут скопированы. Вот код,
+чтобы скопировать последние пять элементов исходного массива в конечный массив
+(массив-назначения):
+         */
